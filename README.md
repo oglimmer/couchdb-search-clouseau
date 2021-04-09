@@ -18,3 +18,11 @@ The helm-chart https://github.com/apache/couchdb-helm/tree/main/couchdb is using
     --set searchImage.tag=latest \
     --set searchImage.pullPolicy=Always
 ```
+
+## multi platform build
+
+This is taken from https://www.docker.com/blog/multi-arch-build-and-images-the-simple-way/.
+
+```
+docker buildx build --push --platform linux/arm64,linux/amd64 --tag oglimmer/couchdb-search-clouseau:latest .
+```
