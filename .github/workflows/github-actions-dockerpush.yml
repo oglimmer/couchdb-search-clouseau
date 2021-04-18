@@ -1,6 +1,8 @@
 name: couchdb-search-clouseau Docker image build and push
 
 on:
+  schedule:
+    - cron: '3 3 * * 3'
   push:
     branches:
       - 'master'
